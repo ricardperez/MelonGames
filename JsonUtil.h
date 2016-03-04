@@ -9,7 +9,7 @@
 #ifndef __KillyCraft__JsonUtil__
 #define __KillyCraft__JsonUtil__
 
-#include "json/json.h"
+#include <jsoncpp/json.h>
 
 namespace MelonGames
 {

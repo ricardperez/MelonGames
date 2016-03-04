@@ -46,7 +46,7 @@ template <typename T> T* asA() const { if (isA<T>()) { return static_cast<T*>(th
 #define DECLARE_TYPE_WITH_BASE_TYPE(name, baseName) \
 typedef baseName Base; \
 static const Type* getClassType() { static Type t(#name, baseName::getClassType()); return &t; } \
-virtual const Type* getInstanceType() const { return getClassType(); } \
+virtual const Type* getInstanceType() const override { return getClassType(); } \
 template <typename T> bool isA() const { return getInstanceType()->isA(T::getClassType()); } \
 template <typename T> T* asA() const { if (isA<T>()) { return static_cast<T*>(this); } return nullptr; }
 

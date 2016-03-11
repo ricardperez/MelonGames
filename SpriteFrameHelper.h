@@ -18,7 +18,10 @@ namespace cocos2d
 
 namespace MelonGames
 {
-    cocos2d::SpriteFrame* spriteFrameOrDefault(const std::string& name);
+    namespace SpriteFrameHelper
+    {
+        cocos2d::SpriteFrame* spriteFrameOrDefault(const std::string& name);
+    }
 }
 
 #endif /* defined(__KillyCraft__SpriteFrameHelper__) */
